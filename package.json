@@ -2,6 +2,7 @@
   "name": "01-it-kam",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://basmete.github.io/SocialNetwork-react-redux",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
@@ -13,7 +14,6 @@
     "bootstrap": "^4.5.3",
     "classnames": "^2.2.6",
     "concurrently": "^5.3.0",
-    "gh-pages": "^3.1.0",
     "prettier": "^2.1.2",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.0",
@@ -38,7 +38,9 @@
     "start": "concurrently \"yarn run stubbyr\" \"yarn run react-scripts\" ",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -57,5 +59,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
   }
 }
