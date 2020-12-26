@@ -1,0 +1,33 @@
+.likesPanel {
+  display: flex;
+  width: 120px;
+}
+
+.likesPanelImage {
+  display: flex;
+  align-items: center;
+}
+
+.likeIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.relativeWrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.like {
+  position: absolute;
+  top: 2px;
+  left: 0px;
+}
+
+.dislike {
+  position: absolute;
+  top: 7px;
+  right: 0px;
+}

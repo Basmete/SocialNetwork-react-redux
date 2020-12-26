@@ -1,0 +1,17 @@
+.postsBlock {
+  padding: 10px;
+}
+
+.posts {
+  margin-top: 10px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.marginRight {
+  margin-right: 10px;
+}

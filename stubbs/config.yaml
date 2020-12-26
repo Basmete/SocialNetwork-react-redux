@@ -1,0 +1,47 @@
+###
+- request:
+    url: ^/users/?&
+    method: GET
+    query:
+      page: 2
+      count: 5
+  response:
+    - status: 200
+      latency: 500
+      file: data/users2page.json
+
+###
+- request:
+    url: /users
+    method: GET
+  response:
+    - status: 200
+      latency: 500
+      file: data/users.json
+
+###
+- request:
+    url: /profile/2
+    method: GET
+  response:
+    - status: 200
+      latency: 500
+      file: data/singleUser1.json
+
+###
+- request:
+    url: /profile/4
+    method: GET
+  response:
+    - status: 200
+      latency: 500
+      file: data/singleUser4.json
+
+###
+- request:
+    url: /auth/me
+    method: GET
+  response:
+    - status: 200
+      latency: 500
+      file: data/auth/authResponse.json

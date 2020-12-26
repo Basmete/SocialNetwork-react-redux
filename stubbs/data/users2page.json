@@ -1,0 +1,41 @@
+{
+  "users": [
+    {
+      "id": 5,
+      "fullName": "5",
+      "photoUrl":
+      "https://yt3.ggpht.com/ytc/AAUvwnjrivhp9qe4_SdweVDYins0lUDHafmTCx28DIKM6AA=s900-c-k-c0x00ffffff-no-rj",
+      "status": "Im a boss",
+      "location": { "city": "Saint-Petersburg", "country": "Russia" },
+      "followed": true
+    },
+    {
+      "id": 6,
+      "fullName": "6",
+      "photoUrl":
+      "https://yt3.ggpht.com/ytc/AAUvwnjrivhp9qe4_SdweVDYins0lUDHafmTCx28DIKM6AA=s900-c-k-c0x00ffffff-no-rj",
+      "status": "Im a boss",
+      "location": { "city": "Saint-Petersburg", "country": "Russia" },
+      "followed": true
+    },
+    {
+      "id": 7,
+      "fullName": "7",
+      "photoUrl":
+      "https://yt3.ggpht.com/ytc/AAUvwnjrivhp9qe4_SdweVDYins0lUDHafmTCx28DIKM6AA=s900-c-k-c0x00ffffff-no-rj",
+      "status": "Im a boss",
+      "location": { "city": "Saint-Petersburg", "country": "Russia" },
+      "followed": false
+    },
+    {
+      "id": 8,
+      "fullName": "8",
+      "photoUrl":
+      "https://yt3.ggpht.com/ytc/AAUvwnjrivhp9qe4_SdweVDYins0lUDHafmTCx28DIKM6AA=s900-c-k-c0x00ffffff-no-rj",
+      "status": "Im a boss",
+      "location": { "city": "Saint-Petersburg", "country": "Russia" },
+      "followed": true
+    }
+  ],
+  "totalCount": 51
+}
