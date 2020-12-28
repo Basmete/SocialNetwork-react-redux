@@ -1,12 +1,15 @@
 import React from "react";
-import * as c from "./ProfileInfo.module.css";
+import * as styles from "./ProfileInfo.module.css";
 import Preloader from "../../common/Preloader/Preloader";
 import ProfileStatus from "./ProfileStatus";
+import defaultAvatar from "../../../assets/images/avatar_default.svg";
 
 function ProfileInfo(props) {
   if (!props.profile) {
     return <Preloader />;
   }
+
+  console.log(props.profile)
 
   const {
     aboutMe,
@@ -14,6 +17,12 @@ function ProfileInfo(props) {
     photos,
     lookingForAJobDescription,
   } = props.profile;
+
+  const onMainPhotoSelected = (e) => {
+    if (e.target.files.length) {
+      props.savePhoto(e.target.files[0])
+    }
+  }
 
   return (
     <div>
@@ -23,11 +32,12 @@ function ProfileInfo(props) {
           alt="123"
         />
       </div>
-      <div className={c.descriptionBlock}>
+      <div className={styles.descriptionBlock}>
         <p>{fullName}</p>
         <p>{aboutMe}</p>
-        <img src={photos.large} alt="" />
+        <img src={photos.large || defaultAvatar} alt="avatar" className={styles.avatar} />
         <p>{lookingForAJobDescription}</p>
+        {props.isOwner && <input type="file" onChange={onMainPhotoSelected}/>}
         <ProfileStatus
           status={props.status}
           updateStatus={props.updateStatus}

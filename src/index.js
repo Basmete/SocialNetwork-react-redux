@@ -5,16 +5,16 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import store from "./redux/reduxStore";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, HashRouter } from "react-router-dom"; // Hash router for correct reload on Github Pages
 import { Provider } from "react-redux";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
+    <HashRouter basename={process.env.PUBLIC_URL}>
       <Provider store={store}>
         <App />
       </Provider>
-    </Router>
+    </HashRouter>
   </React.StrictMode>,
   document.getElementById("root")
 );

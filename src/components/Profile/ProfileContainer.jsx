@@ -1,14 +1,15 @@
 import React from "react";
 import Profile from "./Profile";
-import { connect } from "react-redux";
+import {connect} from "react-redux";
 import {
   getStatus,
   getUserProfileThunk,
+  savePhoto,
   updateStatus,
 } from "../../redux/reducers/profileReducer";
-import { withRouter } from "react-router";
-import { withAuthRedirect } from "../../hoc/withAuthRedirect";
-import { compose } from "redux";
+import {withRouter} from "react-router";
+import {withAuthRedirect} from "../../hoc/withAuthRedirect";
+import {compose} from "redux";
 
 function ProfileContainer(props) {
   React.useEffect(() => {
@@ -22,14 +23,18 @@ function ProfileContainer(props) {
 
     props.getUserProfileThunk(userId);
     props.getStatus(userId);
-  }, []);
+  }, [props.match.params.userId]);
+
+  const isOwner = !props.match.params.userId;
 
   return (
     <Profile
+      isOwner={isOwner}
       {...props}
       profile={props.profile}
       status={props.status}
       updateStatus={props.updateStatus}
+      savePhoto={props.savePhoto}
     />
   );
 }
@@ -47,6 +52,7 @@ const mapDispatchToProps = {
   getUserProfileThunk,
   getStatus,
   updateStatus,
+  savePhoto,
 };
 
 export default compose(
